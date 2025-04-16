@@ -39,10 +39,12 @@ nav a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    padding: 0 10px;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #3367d6;
 }
 
 main h2 {
@@ -102,5 +104,12 @@ header.hero {
     font-size: 1.4em;
     font-weight: bold;
     color: black;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.9);  /* 白背景に少し透過感 */
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
 }
 
