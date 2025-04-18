@@ -138,3 +138,17 @@ nav {
 .back-home a:hover {
   text-decoration: underline;
 }
+.under-construction {
+  margin-top: 2rem;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.under-construction a {
+  color: #3367d6;
+  text-decoration: none;
+}
+
+.under-construction a:hover {
+  text-decoration: underline;
+}
