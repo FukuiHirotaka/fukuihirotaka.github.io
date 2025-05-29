@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>アセモグル風イントロ作成完全マニュアル</title>
+  <title>アセモグル風イントロ作成マニュアル</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     body { max-width: 800px; margin: auto; padding: 2em; font-family: sans-serif; }
@@ -11,7 +11,7 @@
   </style>
 </head>
 <body>
-  <h1>アセモグル風イントロ作成完全マニュアル</h1>
+  <h1>アセモグル風イントロ作成マニュアル</h1>
   <p>D1の1年を費やしてアセモグルの論文を解析し、作成した「アセモグル風イントロ」の構成法です。</p>
   <nav>
     <button onclick="loadMarkdown('1')">アセモグル風イントロの構成</button>
@@ -27,7 +27,7 @@
 
   <script>
     function loadMarkdown(chapter) {
-      fetch(`acemoglu/ac${chapter}.md`)
+      fetch(`/acemoglu/ac${chapter}.md`)
         .then(res => res.text())
         .then(text => {
           document.getElementById('content').innerHTML = marked.parse(text);
