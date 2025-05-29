@@ -1,7 +1,7 @@
 # 第1章：Introductionの書き方
 
 ## 🎯 本章の目的
-本章では、経済学論文におけるイントロダクション（導入部）の構造・役割・文体について体系的に解説し、トップジャーナルに掲載されるようなイントロを書くためのテンプレートと例文を提供する。
+本章では、経済学論文におけるイントロダクション（導入部）の構造・役割・文体について体系的に解説する。
 
 ---
 
@@ -16,25 +16,25 @@
 
 ---
 
-### 🏗️ 構造テンプレート（見出し別）
+### 🏗️ 構造テンプレート（見出し別）Acemoglu (2002)を例に (Acemoglu, 2002では2と3が逆になっている)
 
 #### 1. Big Picture
-> "Macroeconomic instability remains a pressing concern for developing countries, particularly in the aftermath of external financial liberalization."
+> "There is now a large and influential literature on the determinants of the aggregate technical progress."
 
 #### 2. Key Attribute
-> "This paper focuses on the long-term vulnerabilities introduced by capital account liberalization, using a dynamic general equilibrium model calibrated to the case of Argentina."
+> "The framework I present for this purpose generalizes the existing endogenous technical change models to allow for technical change to be directed towards different factors."
 
 #### 3. Motivation / Puzzle
-> "Despite extensive empirical analysis of liberalization episodes, little is known about whether such reforms can, paradoxically, lay the foundations for future debt crises."
+> "These examples document a variety of important macroeconomic issues where biased technical change plays a key role."
 
 #### 4. Key Results
-> "I show that the 2006 liberalization in Argentina increased the country’s exposure to external shocks, thereby contributing to the 2025 sovereign default. This result is robust across alternative shock specifications and parameterizations."
+> "The first major result of this framework is a "weak induced-bias hypothesis"...The second major result is a "strong induced-bias hypothesis"..."
 
 #### 5. Literature Positioning
-> "This study builds on Aguiar and Gopinath (2006) and Garcia (2020), but differs by modeling long-run debt dynamics in continuous time and focusing on the policy implications of early liberalization."
+> "Although there is relatively little current research on biased technical change, an earlier literature was devoted to studying related issues"
 
 #### 6. Roadmap
-> "The remainder of this paper proceeds as follows. Section 2 presents the model. Section 3 describes the calibration. Section 4 analyzes counterfactual scenarios. Section 5 discusses robustness checks. Section 6 concludes."
+> "The rest of the paper is organized as follows. ..."
 
 ---
 
@@ -46,13 +46,13 @@
 4. **考察（Interpretation）**  
 5. **橋渡し（Transition）**
 
-#### ✅ 例：Puzzle提示のパラグラフ
+#### ✅ 例：Acemoglu (2002)の1stパラグラフ
 
-> (1) *A growing body of work has evaluated the effects of financial liberalization on economic growth.*  
-> (2) *However, much less attention has been paid to its role in shaping macroeconomic vulnerabilities.*  
-> (3) *For instance, countries like Ghana experienced a boom in external borrowing post-liberalization, which later culminated in sovereign distress.*  
-> (4) *This suggests that liberalization may have unintended long-term consequences.*  
-> (5) *This paper investigates that possibility through a quantitative modeling approach.*
+> (1) *There is now a large and influential literature on the determinants of the aggregate technical progress*  
+> (2) *This literature does not address questions related to the direction and bias of technical change*  
+> (3) *In most situations, however, technical change is not neutral: it benefits some factors of production more than others.*  
+> (4) *In this paper, I develop a simple framework of directed technical change to study these biases*  
+> (5) *In this framework, profit incentives determine the amount of research and development directed at different factors and sectors. *
 
 ---
 
@@ -77,6 +77,7 @@
 - Swales & Feak (2012). *Academic Writing for Graduate Students*. Unit 1–3.  
 - Cochrane, J. (2005). *Writing Tips for PhD Students*.  
 - Acemoglu, D. (Various). *Selected Papers* (e.g., JPE, QJE, AEJ-Macro)
+- Acemoglu, D. (2002) *Directed Technical Change*. The Review of Economic Studies, 69(4):781–809.
 
 ---
 
