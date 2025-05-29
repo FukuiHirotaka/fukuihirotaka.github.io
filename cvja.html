@@ -1,0 +1,54 @@
+--- cvja.html ---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>CV | 福井 裕貴</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    #cv-content { margin-top: 2rem; }
+    .language-switch { text-align: right; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container header-flex">
+      <div class="logo-title">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <span class="site-title">福井 裕貴</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="cvja.html">CV</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="language-switch">
+      <a href="cv.html">English Version</a>
+    </div>
+    <p><a href="Fukui_CV_JA.pdf" download>PDF版をダウンロード</a></p>
+    <div id="cv-content">読み込み中です...</div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 福井 裕貴. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    fetch('cvja.md')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('cv-content').innerHTML = marked.parse(text);
+      });
+  </script>
+</body>
+</html>
