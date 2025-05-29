@@ -27,7 +27,10 @@ Tokyo University of Foreign Studies, Japan
 - **Real Business Cycles in African Economies: How Important Are Trend Shocks?**
   
   *(Under preparation)*
+  
+- **Uncertainty, Adjustment Costs, and Irreversibility in Investment: Implications for Real Business Cycle in Africa**
 
+  *(Under preparation)*
 ---
 
 ## 🧑‍🏫 Teaching Experience
