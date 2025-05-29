@@ -22,16 +22,16 @@
 > "Macroeconomic instability remains a pressing concern for developing countries, particularly in the aftermath of external financial liberalization."
 
 #### 2. Key Attribute
-> "This paper focuses on the long-term vulnerabilities introduced by capital account liberalization, using a sovereign default model calibrated to the case of Ghana."
+> "This paper focuses on the long-term vulnerabilities introduced by capital account liberalization, using a dynamic general equilibrium model calibrated to the case of Argentina."
 
 #### 3. Motivation / Puzzle
 > "Despite extensive empirical analysis of liberalization episodes, little is known about whether such reforms can, paradoxically, lay the foundations for future debt crises."
 
 #### 4. Key Results
-> "I show that the 2006 liberalization in Ghana increased the country’s exposure to external shocks, thereby contributing to the 2022 sovereign default. This result is robust across alternative shock specifications and parameterizations."
+> "I show that the 2006 liberalization in Argentina increased the country’s exposure to external shocks, thereby contributing to the 2025 sovereign default. This result is robust across alternative shock specifications and parameterizations."
 
 #### 5. Literature Positioning
-> "This study builds on Aguiar and Gopinath (2006) and Bornstein (2020), but differs by modeling long-run debt dynamics in continuous time and focusing on the policy implications of early liberalization."
+> "This study builds on Aguiar and Gopinath (2006) and Garcia (2020), but differs by modeling long-run debt dynamics in continuous time and focusing on the policy implications of early liberalization."
 
 #### 6. Roadmap
 > "The remainder of this paper proceeds as follows. Section 2 presents the model. Section 3 describes the calibration. Section 4 analyzes counterfactual scenarios. Section 5 discusses robustness checks. Section 6 concludes."
