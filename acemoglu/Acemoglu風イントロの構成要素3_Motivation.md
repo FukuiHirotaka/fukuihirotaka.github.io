@@ -1,4 +1,4 @@
-# ✅ Acemoglu風イントロ：Motivationセクション 共通構造テンプレート分析
+# Acemoglu風イントロの構成要素3：Motivation
 
 ## 🔹 Motivationとは？
 提示されたstylized factやKey Attributeが**なぜ理論的・政策的に重要なのか**、そして**既存文献ではなぜそれが十分に説明されていないのか**を明確にするパート。
@@ -59,7 +59,7 @@
 
 ---
 
-## ✏️ 5. Motivationセクションの典型テンプレ（マクロ系向け）
+## ✏️ 5. Motivationセクションの典型テンプレ
 
 ### ✅ Motivationテンプレ（2段落型）
 
