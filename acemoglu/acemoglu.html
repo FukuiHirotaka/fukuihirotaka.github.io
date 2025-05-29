@@ -27,7 +27,7 @@
 
   <script>
     function loadMarkdown(chapter) {
-      fetch(`acemoglu/ac${chapter}.md`)
+      fetch(`ac${chapter}.md`)
         .then(res => res.text())
         .then(text => {
           document.getElementById('content').innerHTML = marked.parse(text);
