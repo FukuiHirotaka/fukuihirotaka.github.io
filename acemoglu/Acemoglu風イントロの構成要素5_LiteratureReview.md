@@ -1,4 +1,4 @@
-# ✅ Acemoglu風イントロ：Literature Reviewセクション 共通構造テンプレート分析
+# Acemoglu風イントロの構成要素⑤：Literature Review
 
 ## 📌 1. このセクションの目的
 この論文が属する分野（literature）を特定し、  
