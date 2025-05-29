@@ -15,7 +15,7 @@
 
 ---
 
-### ✅ テンプレ文例
+### ✅ Acemoglu (2002)の文例 
 
 > *This paper investigates the long-run consequences of capital account liberalization in emerging economies.*  
 > *Despite extensive empirical literature, the macroeconomic risks stemming from early liberalization episodes remain underexplored.*  
