@@ -24,11 +24,28 @@ Tokyo University of Foreign Studies, Japan
 - **Boom, Bust, and Breakdown: Did Ghana’s 2006 Liberalization Sow the Seeds of the 2022 Default?**
   
   *(Under preparation)*
+
+- **From Debt to Doom? Government Borrowing and Financial Constraints in African Firms**
+
+  *(Under preparation)*
+
+- **Fiscal Fragility from Banking Rescue in Africa: A Theory of Reverse Doom Loops**
+
+  *(Under preparation)*
+  
 - **Real Business Cycles in African Economies: How Important Are Trend Shocks?**
   
   *(Under preparation)*
   
 - **Uncertainty, Adjustment Costs, and Irreversibility in Investment: Implications for Real Business Cycle in Africa**
+
+  *(Under preparation)*
+
+- **Acyclical Behavior of Trade Balance in African Economies: An Empirical Examination**
+
+  *(Under preparation)*
+
+- **Macroeconomic Effect of Dependence on Imported Foods in African Countries**
 
   *(Under preparation)*
 ---
