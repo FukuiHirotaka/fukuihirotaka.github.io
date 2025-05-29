@@ -1,4 +1,4 @@
-# Acemoglu風イントロの構成要素2：Key Attribute
+# Acemoglu風イントロの構成要素②：Key Attribute
 
 ## 🔹 Key Attributeとは？
 読者に「なぜこの問いが重要か？」を納得させるための核心的特徴や観察事実（stylized facts, empirical puzzles, structural tensions）を提示するパート。Big Pictureが外観なら、Key Attributeは焦点である。
