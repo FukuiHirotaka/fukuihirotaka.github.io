@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>経済学院生のためのアカデミックライティング・マニュアル</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body { max-width: 800px; margin: auto; padding: 2em; font-family: sans-serif; }
+    nav { margin-bottom: 2em; }
+    nav button { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <h1>経済学院生のためのアカデミックライティング・マニュアル</h1>
+  <nav>
+    <button onclick="loadMarkdown('1')">第1章</button>
+    <button onclick="loadMarkdown('2')">第2章</button>
+    <button onclick="loadMarkdown('3')">第3章</button>
+    <button onclick="loadMarkdown('4')">第4章</button>
+    <button onclick="loadMarkdown('5')">第5章</button>
+    <button onclick="loadMarkdown('6')">第6章</button>
+    <button onclick="loadMarkdown('7')">第7章</button>
+    <button onclick="loadMarkdown('8')">第8章</button>
+    <button onclick="loadMarkdown('9')">第9章</button>
+  </nav>
 
+  <div id="content">読み込み中...</div>
+
+  <script>
+    function loadMarkdown(chapter) {
+      fetch(`ch${chapter}.md`)
+        .then(res => res.text())
+        .then(text => {
+          document.getElementById('content').innerHTML = marked.parse(text);
+        });
+    }
+    loadMarkdown('1'); // デフォルトで第1章
+  </script>
+</body>
+</html>
