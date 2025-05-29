@@ -19,8 +19,8 @@
 
 > *This paper investigates the long-run consequences of capital account liberalization in emerging economies.*  
 > *Despite extensive empirical literature, the macroeconomic risks stemming from early liberalization episodes remain underexplored.*  
-> *Using a calibrated continuous-time sovereign default model, I simulate Ghana’s borrowing dynamics under alternative shock scenarios.*  
-> *The results suggest that the 2006 liberalization substantially increased exposure to external shocks, contributing to the 2022 debt crisis.*  
+> *Using a calibrated continuous-time sovereign default model, I simulate Argentina’s borrowing dynamics under alternative shock scenarios.*  
+> *The results suggest that the 2000 liberalization substantially increased exposure to external shocks, contributing to the 2022 debt crisis.*  
 > *These findings underscore the importance of institutional safeguards when implementing financial reforms.*
 
 ---
