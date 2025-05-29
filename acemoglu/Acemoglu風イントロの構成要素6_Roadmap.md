@@ -1,4 +1,4 @@
-# ✅ Acemoglu風イントロ：Roadmapセクション 共通構造テンプレート
+# Acemoglu風イントロの構成要素⑤：Roadmap
 
 ## 📌 1. このセクションの目的
 
