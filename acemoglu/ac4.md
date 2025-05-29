@@ -1,4 +1,4 @@
-# Acemoglu風イントロの構成要素3：Motivation
+# Acemoglu風イントロの構成要素③：Motivation
 
 ## 🔹 Motivationとは？
 提示されたstylized factやKey Attributeが**なぜ理論的・政策的に重要なのか**、そして**既存文献ではなぜそれが十分に説明されていないのか**を明確にするパート。
