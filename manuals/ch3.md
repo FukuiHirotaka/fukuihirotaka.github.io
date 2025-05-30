@@ -15,20 +15,20 @@
 
 ---
 
-### 🧱 構造テンプレ（3段階構成）
+### 🧱 構造テンプレ（3段階構成）Acemoglu (2002)を例に
 
 #### ✅ ステージ1：分野の流れを要約（状態の共有）
 
-> *A large body of research has examined the effects of capital account liberalization on growth and investment (e.g., Henry, 2007; Kose et al., 2009).*  
-> *Recent contributions have focused on institutional preconditions (Prasad et al., 2007), and the cyclical patterns of liberalization episodes (Kaminsky and Schmukler, 2008).*
+> *These questions were revived by the "induced innovation" literature. An important paper by Kennedy (1964) introduced...*  
+
 
 #### ✅ ステージ2：ギャップ・問題点の指摘
 
-> *However, relatively few studies have investigated the long-term fiscal and macroeconomic risks associated with early-stage liberalization in low-income countries.*
+> *This literature was also criticized for lack of micro-foundations, however*
 
 #### ✅ ステージ3：本研究の位置づけ
 
-> *This paper contributes to this literature by modeling the sovereign debt dynamics triggered by capital account reforms, using Ghana as a representative case.*
+> *The analysis here, instead, starts from the explicit micro-foundations laid out by the endogenous technical change models.*
 
 ---
 
@@ -58,6 +58,7 @@
 - Booth et al. (2016). *The Craft of Research*. Chapter 5–7  
 - Swales & Feak (2012). *Academic Writing for Graduate Students*. Unit 4–6  
 - Cochrane, J. (2005). *Writing Tips for PhD Students*
+- Acemoglu, D. (2002). Directed technical change. The review of economic studies, 69(4), 781-809.
 
 ---
 
