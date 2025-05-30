@@ -29,11 +29,11 @@ Booth et al. (2016)の議論によれば、研究者は「読者の頭の中に�
 
 ---
 
-## 🧱 モデルセクションの基本構成（テンプレ）
+## 🧱 モデルセクションの基本構成 Acemoglu and Restrepo (2021)を例に
 
 ### 1. エコノミックストーリー（イントロ）
 
-> *"We consider a small open economy subject to external interest rate shocks…"*
+> *"In this section, we present a simple model of directed technology adoption and innovation, and derive a number of results on the relationship between demographic change and automation, which will guide our empirical work in the rest of the article."*
 
 - 読者に「何を考えるのか」「なぜこのモデルなのか」を語る。
 
@@ -41,7 +41,8 @@ Booth et al. (2016)の議論によれば、研究者は「読者の頭の中に�
 
 ### 2. エージェントと市場（設定）
 
-> *"There is a representative household that derives utility from consumption and faces a borrowing constraint…"*
+> *"The economy produces a numeraire good Y by combining the outputs of a continuum of industries (or varieties) through a constant elasticity of substitution (CES) aggregator:"*
+> *"There are two types of workers: middle-aged and older workers."*
 
 - 家計／企業／政府／金融市場などの構造を簡潔に提示。
 
@@ -51,13 +52,13 @@ Booth et al. (2016)の議論によれば、研究者は「読者の頭の中に�
 
 - 数式は経済的意味が明らかな順序で提示。
 - 各式の直後に「意味を明確に説明」する一文を添える。  
-  例： *"This captures the intertemporal trade-off the household faces."*
+  例： *"where the last equality in each expression defines the demand for that factor"*
 
 ---
 
 ### 4. 均衡概念の明示
 
-> *"A competitive equilibrium consists of sequences {…} such that…"*
+> *"We first characterize the equilibrium with exogenous technology, where the set of technologies is taken as given."*
 
 - モデルにおける均衡の定義を提示。
 
@@ -107,10 +108,10 @@ Booth et al. (2016)の議論によれば、研究者は「読者の頭の中に�
   *The household faces a standard intertemporal budget constraint. In the current context, this becomes: …*
 
 - ✅ **経済的直観の挿入**  
-  *This borrowing constraint captures the idea that access to international credit is limited by the country’s default risk.*
+  *This borrowing constraint captures the idea that the country’s default risk limits access to international credit.*
 
 - ✅ **モデル全体の役割のリマインダー**  
-  *This setup allows us to study how global interest rate hikes affect debt sustainability under different institutional settings.*
+  This setup enables us to examine how global interest rate hikes impact debt sustainability under various institutional settings.*
 
 ---
 
