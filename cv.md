@@ -21,7 +21,7 @@ Tokyo University of Foreign Studies, Japan
 ---
 
 ## 📄 Working Papers
-- **Boom, Bust, and Breakdown: Did Ghana’s 2006 Liberalization Sow the Seeds of the 2022 Default?**
+<!--- **Boom, Bust, and Breakdown: Did Ghana’s 2006 Liberalization Sow the Seeds of the 2022 Default?**
   
   *(Under preparation)*
 
@@ -31,21 +31,21 @@ Tokyo University of Foreign Studies, Japan
 
 - **Fiscal Fragility from Banking Rescue in Africa: A Theory of Reverse Doom Loops**
 
+  *(Under preparation)*-->
+  
+- **On the Sources of Macroeconomic Fluctuations in Sub-Saharan African Countries: The Role of Financial Frictions**
+  
   *(Under preparation)*
   
-- **Real Business Cycles in African Economies: How Important Are Trend Shocks?**
-  
-  *(Under preparation)*
-  
-- **Uncertainty, Adjustment Costs, and Irreversibility in Investment: Implications for Real Business Cycle in Africa**
+<!---- **Uncertainty, Adjustment Costs, and Irreversibility in Investment: Implications for Real Business Cycle in Sub-Saharan Africa**
+
+  *(Under preparation)*-->
+
+- **Acyclical Behavior of Trade Balance in Sub-Saharan African Economies: An Empirical Examination**
 
   *(Under preparation)*
 
-- **Acyclical Behavior of Trade Balance in African Economies: An Empirical Examination**
-
-  *(Under preparation)*
-
-- **Macroeconomic Effect of Dependence on Imported Foods in African Countries**
+- **Macroeconomic Effect of Dependence on Imported Foods in Sub-Saharan African Countries**
 
   *(Under preparation)*
 ---
@@ -95,4 +95,4 @@ Economics, Kobe U, Apr. 2024-Mar. 2025
 
 ---
 
-_Last updated: April 2025_
+_Last updated: June 2025_
