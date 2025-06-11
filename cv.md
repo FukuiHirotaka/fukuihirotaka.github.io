@@ -15,7 +15,7 @@ Website: [https://fukuihirotaka.github.io/](https://fukuihirotaka.github.io/)
 M.A. in Economics, 2024 
 Kobe University, Japan
 
-B.A. in Language and Area Studies, 2022  
+B.A. in Language and Area Studies (Africa), 2022  
 Tokyo University of Foreign Studies, Japan
 
 ---
