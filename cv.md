@@ -7,7 +7,7 @@ Website: [https://fukuihirotaka.github.io/](https://fukuihirotaka.github.io/)
 
 ## 🎓 Current Position
 **Ph.D. Student**, Graduate School of Economics, Kobe University, Apr. 2024 - present  
-- Advisors: Shigeto Kitano, Yoichi Matsubayashi, Kenichi Hashimoto
+- Advisors: Shigeto Kitano, Yoichi Matsubayashi, 
 - Fields: International Macroeconomics, Quantitative Macroeconomics, African Economies
 ---
 
