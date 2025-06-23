@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>money_give_money.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+ <div class="back-home">
+	<a href="index.html">← Back to Home</a>
+</div>
+<h1 id="in-praise-of-handouts-just-give-people-the-money">In Praise of Handouts: Just Give People the Money</h1>
+<div class="language-switch">
+  <a href="money_give_money_ja.html">Japanese version</a>
+</div>
+<p>HIROTAKA, Fukui</p>
+<h2 id="we-almost-had-cashand-then-we-didnt">We Almost Had Cash—And Then We Didn't</h2>
+<p>For a brief, shining moment in April 2024, it looked like Japan might do something bold.<br>
+The government floated the idea of a universal cash handout—a rare, glorious moment when fiscal policy and common sense seemed to be on speaking terms.</p>
+<p>And then, poof. It vanished.<br>
+Like a limited-edition bento on sale at lunchtime.</p>
+<p>Why? Because people didn’t like it.<br>
+A Yomiuri poll found that 76% of respondents thought handing out cash wasn’t effective.<br>
+Seventy-six percent. Against free money.</p>
+<p>My first reaction? <em>Are you kidding me?</em><br>
+Eggs cost more than your streaming subscription. We’re all budgeting like monks. And you don’t want cash?</p>
+<p>But then... okay. I took a breath.<br>
+Maybe there’s more to this. Maybe, just maybe, people were being reasonable.</p>
+<h2 id="okay-maybe-the-public-had-a-point">Okay, Maybe the Public Had a Point</h2>
+<p>But here’s the thing. After the initial outrage—after the yelling-into-a-pillow phase—I started to think.</p>
+<p>Maybe people weren’t being irrational. Maybe they were being painfully, frustratingly <strong>practical</strong>.</p>
+<p>Prices have gone up. Eggs, bentos, the daily basics—<em>everything</em>. And yet, people haven’t panicked. They’re still buying.<br>
+According to <em>The Economist</em>, even long-time bento vendors have raised prices multiple times, and customers just shrug and say, “That’s how it is.”</p>
+<p>So maybe the public wasn’t rejecting help.<br>
+Maybe they were rejecting the <strong>wrong kind</strong> of help.</p>
+<p>Why give out ¥50,000 in cash when what people really want is for their grocery bill to stop punching them in the wallet every week?<br>
+In that context, a tax cut—especially on consumption—feels more responsible. More grounded. Less like a political stunt and more like structural relief.</p>
+<p>It’s not irrational.<br>
+It’s <strong>worn-out, weary common sense</strong>.</p>
+<p>And I respect that.</p>
+<p>But…</p>
+<h2 id="i-know-its-rational-but-i-still-wanted-the-money">I Know It’s Rational, But I Still Wanted the Money</h2>
+<p>I get it.</p>
+<p>People didn’t reject cash because they hate money. They just want their everyday costs—eggs, rent, ramen—to stop climbing.<br>
+They don’t want a flashy stimulus that feels like the government saying, <em>“Go ahead, treat yourself—on us!”</em><br>
+They want relief that’s practical. Grounded. Boring, even.</p>
+<p>Honestly? That makes sense.</p>
+<p>But here’s the thing:</p>
+<p><strong>I don’t want “sense.”</strong><br>
+I want a new rice cooker.<br>
+I want a keyboard that lights up like a disco.<br>
+I want that one absurdly expensive ice cream in the gold tub that makes me feel like I own a yacht—even though I don’t even own a balcony.</p>
+<p>I’m not trying to optimize social welfare.<br>
+I just want ¥30,000 to recklessly spend on things I don’t technically need but emotionally require.</p>
+<p>So yes, the public and the economists might be on the same page.<br>
+But my wishlist didn’t get the memo.</p>
+<p>And neither did my bank account.</p>
+<h2 id="final-thoughts-i-dont-care-about-multiplier-effects-i-just-want-stuff">Final Thoughts: I Don’t Care About Multiplier Effects. I Just Want Stuff.</h2>
+<p>To be fair, there’s a rational story behind this national aversion to handouts.</p>
+Japan’s consumers aren’t naïve. They’ve noticed that prices are rising—on eggs, on bentos, on daily essentials—and they’re still buying. <br>
+According to The Economist, even when bento prices go up, customers don’t complain. They understand. They adapt.<br>
+So maybe it’s not about opposing help. Maybe it’s about wanting the right kind of help.</p>
+<p>Rather than a sudden cash injection that might feel frivolous --- “Oh, I got ¥50,000, maybe I’ll buy that air fryer I don’t need” --- people want relief on what they already have to spend every single day.<br>
+In that light, a consumption tax cut, especially on essentials, feels more grounded. More grown-up. More responsible.</p>
+<p>It's not necessarily emotional logic. It's economic logic --- the kind that should shape public policy more than any public opinion ever will. I know it because I'm Ph.D. student in Economics --- especially --- Macroeconomics.</p>
+<p>I want cash. In my hand. Now. Because I have things I want to buy. <br>
+Dumb things. Beautiful things. Things that make absolutely no macroeconomic sense. </p>
+<p>A new pair of sneakers I don’t really need,</p> 
+<p>A ridiculous amount of convenience store pudding,</p>
+<p>A keyboard that lights up in seven colors even though I only type emails,</p>	
+<p>A backpack that makes me feel like I’m going somewhere, even when I’m not, </p> 
+<p>And the big one: a ticket to see my favorite idol group in concert.<br>
+It cost me ¥20,000. Afterward, I remember thinking, “Well, guess I’m eating cup noodles for the rest of the month.”<br>
+Little did I know, it would be their last tour in Japan.<br>
+And I’m glad I went.<br>
+I think I’ll remember that night for the rest of my life.</p>
+<p>So yes, I'm Ph.d student in <strong>Economics</strong>. I read papers, nod at the models. But deep in my heart, the logic remains simple:</p>
+<p><strong>I want money. Because I want stuff. And that should be enough.</strong></p>
+
+</body>
+</html>
