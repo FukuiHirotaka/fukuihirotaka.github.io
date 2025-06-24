@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Book Shelf</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2em;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .shelf {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5em;
+      margin-top: 2em;
+    }
+    .book {
+      background: white;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+    .book:hover {
+      transform: translateY(-5px);
+    }
+    .book-title {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+    }
+    .book-link {
+      color: #007acc;
+      text-decoration: none;
+    }
+    .book-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 My Bookshelf</h1>
+  <div class="shelf">
+    <div class="book">
+      <div class="book-title">Pride and Prejudice</div>
+      <a href="pride-and-prejudice.html" class="book-link" target="_blank">Read</a>
+    </div>
+    <div class="book">
+      <div class="book-title">Frankenstein</div>
+      <a href="frankenstein.html" class="book-link" target="_blank">Read</a>
+    </div>
+    <div class="book">
+      <div class="book-title">The Adventures of Sherlock Holmes</div>
+      <a href="sherlock-holmes.html" class="book-link" target="_blank">Read</a>
+    </div>
+    <!-- 他の本もここに追加 -->
+  </div>
+</body>
+</html>
 
