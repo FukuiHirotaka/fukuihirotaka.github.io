@@ -1,1 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MMT_ja.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<div class="back-home">
+      <a href="index.html">← ホームに戻る</a>
+</div>
+<h1 id="%E7%8F%BE%E9%87%91%E3%82%92%E8%AE%83%E3%81%88%E3%81%A6%E3%81%A8%E3%81%AB%E3%81%8B%E3%81%8F%E9%87%91%E3%82%92%E9%85%8D%E3%82%8C">幻想を商う人々と、夢に酔う人々：それがMMT</h1>
+<div class="language-switch">
+  <a href="MMT.html">英語版</a>
+</div>
+<p>HIROTAKA, Fukui</p>
+<p>
+MMT（現代貨幣理論）に明示的に立脚した理論的・実証的な論文が主流の経済学ジャーナルに掲載された実績は一つも存在しません。もしMMTの支持者たちが、自分たちの理論が本当に有効で説得力ある経済学的枠組みだと信じるのであれば、その主張を査読付きのトップジャーナルで発表する責任があるはずです。
+</p>
+
+<p>
+しかし彼らは、現実の制度に組み込めるような形で理論を定式化・定量化するという学術的努力を怠ってきました。要するに、彼らは夢だけを語り、科学的な手続きを無視してきたのです。
+</p>
+
+<p>
+さらに悪いことに、彼らの主張はしばしば「何が起きても説明できてしまう」性質を持ち、反証可能性を欠いています。これは科学的理論として決定的に不適格です。知的誠実さを欠いた姿勢であり、学問としての最低限の責任を果たしていません。
+</p>
+
+<p>
+我々は問うべきです。MMTの前提の下でのみ生じ、他の主流理論では生じない現象があるのか？あるいは、主流理論では説明可能だがMMTでは説明できない現象があるのか？そして、それらの現象は現実に実際に起きているのか？こうした問いこそが、いかなる理論にも課されるべき科学的検証の基本です。そして、この検証の主体となるべきは、他ならぬMMTの経済学者自身なのです。
+</p>
+
+<p>
+私は以前にも述べたように、主流派が「主流派」である理由は、この種の厳格な検証に長年耐え抜いてきたからです。もしMMTが真に対抗しうる理論になりたいのであれば、まずは10年以上にわたって理論的・実証的な検証に晒され、それでも重大な矛盾や誤謬が見つからないことを示す必要があります。そうした年月を経た上で、初めてその理論が支持されるか否かの議論が成り立つのです。
+</p>
+
+<p>
+しかし、私の観測範囲において、MMTの支持者にこのような知的努力の姿勢は見られません。むしろ、検証すらされていない新理論を無理やり制度にねじ込もうとする動きの方が目立ちます。
+</p>
+
+<p>
+彼らは仲間内で語ることを好み、自分たちの考えに合わない理論や事実を無視し、数十年前に他人が組み立てたアイデアをひたすら繰り返し唱えます。そして、自分たちに反対する者を無能と決めつけます。彼らのメッセージは、学術界ではなく一般大衆に向けられ、「コストゼロで実現する明るい未来」という魅力的なストーリーを語るのです。
+</p>
+
+<p>
+Françoise Drumetz と Christian Pfister（2021）が指摘するように、MMTは反証可能な科学的理論ではなく、「進歩的な目標を実現するために、無制限の政府支出は正しく、かつ可能である」と信じる人々による政治的かつ倫理的な声明に過ぎません。要するに、それは政治的マニフェストなのです。Krugmanの言葉を借りれば、彼らは「政策プロモーター」であり、経済政策を売り歩く者たちにすぎません。
+</p>
+
+<p>
+まずはトップジャーナルで査読を通した論文を提示してから主張すべきです。それができない限り、議論に値しません。真剣に受け止めてほしいのであれば、厳格な学術的検証に耐えうる理論と実証を持ってくることです。それができないなら、聞く耳を持つ必要はない。
+</p>
+
+<p>
+最後に、国民に問いたい。あなたは本当に、こんな雑な理屈に自分たちの国を託すつもりですか？<br>
+それは、すべての治療法を否定する医者に自分の命を預けるようなものです。<br>
+健康でいられると思わないことですね。
+</p>
+</body>
+</html>
