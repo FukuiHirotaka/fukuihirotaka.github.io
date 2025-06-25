@@ -21,6 +21,7 @@ Tokyo University of Foreign Studies, Japan
 ---
 
 ## 📄 Working Papers
+- **Properties of Business Cycles in African Economies**
 <!--- **Boom, Bust, and Breakdown: Did Ghana’s 2006 Liberalization Sow the Seeds of the 2022 Default?**
   
   *(Under preparation)*
@@ -33,7 +34,7 @@ Tokyo University of Foreign Studies, Japan
 
   *(Under preparation)*-->
   
-- **On the Sources of Macroeconomic Fluctuations in Sub-Saharan African Countries: The Role of Financial Frictions**
+- **On the Sources of Macroeconomic Fluctuations in Sub-Saharan African Countries: The Role of Trend Shocks**
   
   *(Under preparation)*
   
