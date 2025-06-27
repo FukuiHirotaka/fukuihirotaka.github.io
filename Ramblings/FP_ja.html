@@ -1,1 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FP_ja.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<div class="back-home">
+      <a href="index.html">← ホームに戻る</a>
+</div>
+<h1 id="%E7%8F%BE%E9%87%91%E3%82%92%E8%AE%83%E3%81%88%E3%81%A6%E3%81%A8%E3%81%AB%E3%81%8B%E3%81%8F%E9%87%91%E3%82%92%E9%85%8D%E3%82%8C">競争に負けたら？ルールを変えろ！</h1>
+<h2>博士課程支援制度に見る日本の実力主義からの撤退</h2>
+<div class="language-switch">
+  <a href="FP.html">英語版</a>
+</div>
+<p>HIROTAKA, Fukui</p>
+<p>あなたが競争の激しい博士課程奨学金に応募すると想像してみてください。丁寧に準備を重ね、説得力のある研究計画書を書き上げ、面接でも実力を発揮した。ところが、最終的に選ばれたのは、あなたより準備が整い、集中力があり、意欲にあふれた別の応募者でした。</p>
+
+  <p>実力主義が機能する世界であれば、答えは明快です：もっと努力して再挑戦する。しかし、もしルールを変える力があるとしたら？</p>
+
+  <p>それが今、日本で起きていることなのです。</p>
+
+  <h2>生活費支援、日本人限定に</h2>
+  <p>日本の文部科学省は、2026年度から主要な博士課程支援制度において、生活費支援を日本国籍保持者のみに限定するという方針を打ち出しました。その理由？中国人を中心とする外国人学生が、支援枠のうち最大40％を占めているということです。</p>
+
+  <p>一見すると「自国民を守る愛国的政策」のように聞こえます。けれども冷静に見れば、それは実力で勝てない現実を前にして、ルールを変えるという政治的方便にすぎません。しかも、日本語で、日本の大学で、日本の審査委員によって選ばれるという条件下においてすら、日本人学生が外国人に劣っている、という事実に対する反応なのです。</p>
+
+  <p>だからといって、「国内学生が負けているなら、競争そのものを変えてしまえ」という姿勢は、道義的にも、経済的にも正当化されません。</p>
+
+  <h2>なぜ「最も優れた人」を選ばないのか</h2>
+  <p>世界レベルの研究者を育成したいのであれば、選ぶべきは「最も国内にいる人」ではなく「最も優れた人」です。公的資金は、知的な潜在力や生産性への投資であるべきで、国籍に基づく割り当てではありません。能力よりもパスポートに重きを置くなら、投資としての回収率は確実に下がります。そして何より、それは卓越性を損なうのです。「日本人である」というだけで支援が保証されるなら、誰が本気で努力するでしょうか？</p>
+
+  <p>皮肉なことに、こうした外国人学生の多くは、博士号取得後も日本に残り、研究や経済、イノベーションの分野で貢献していくはずでした。にもかかわらず、今彼らに送られているメッセージは、こうです：</p>
+
+  <blockquote><strong>「あなたは優秀すぎる。勝つのはもうやめてくれ。」</strong></blockquote>
+
+  <p>この政策は、日本を守るどころか、むしろ弱体化させるのです。競争を恐れ、実力を忌避し、成果よりも見栄えを優先する。そんな制度が、未来の研究力や国際的信頼を築けるはずがありません。</p>
+
+  <h2>本当の問題は「外国人」ではない</h2>
+  <p>博士課程における外国人比率が高いことは、世界の多くの国では成功の証と見なされます。ところが日本では、「中国人学生が増えている」という事実が、まるで“危機”のように扱われている。</p>
+
+  <p>文科省の説明では、「経済的な不安や将来の不透明さが、日本人学生の進学を妨げている」とのこと。確かにそれも一理あります。しかし、だからといって、その根本原因——たとえば奨学金の低さ、ポストの不安定さ、民間との接続の弱さなど——に向き合うことなく、「外国人を減らす」という選択に走ったのは、まったく筋違いです。</p>
+
+  <p>要するに、<strong>日本人学生が勝てないのなら、外国人を排除すればいい。</strong></p>
+
+  <p>という発想が、政策の中核にあるわけです。これは制度改革の失敗の典型例であり、実力主義の根本を損なう非常に危険な発想です。</p>
+
+  <h2>間違ったアファーマティブ・アクション</h2>
+  <p>本来のアファーマティブ・アクション（積極的差別是正措置）は、歴史的・構造的に不利な立場に置かれた人々の出発点を整えるための政策です。公平性（equity）を確保するための手段です。</p>
+
+  <p>けれども今回の政策で“守られようとしている”日本人学生は、制度的に排除されているわけではありません。むしろ、日本語という言語的優位、自国ネットワーク、地元大学というホームアドバンテージなど、有利な立場にいます。</p>
+
+  <p>それでもなお、彼らが競争に負けている。</p>
+
+  <p>本来なら、これは警鐘であるべきです。しかし、それをきっかけに制度を改善するのではなく、単に他者を排除しようとしている。このやり方は、「平等」ではありません。ただの内向きな保護主義です。</p>
+
+  <h2>本当の構造問題は「インセンティブの崩壊」</h2>
+  <ul>
+    <li>博士課程の生活費：年間約240万円</li>
+    <li>民間就職すれば初任給でも400～800万円</li>
+    <li>キャリアの展望：任期付きポスト、低年収、社会的評価の低さ</li>
+  </ul>
+
+  <p>これでは、どんなに優秀な学生でも「博士課程に進もう」とは思えません。競争に負けたのではなく、そもそも競争に参加していないのです。</p>
+
+  <p>その結果、日本の大学院は、もはや日本国内のトップ人材を惹きつける場ではなくなっています。</p>
+
+  <h2>必要なのは「排除」ではなく「誘引」</h2>
+  <ul>
+    <li>生活費支援の大幅引き上げ</li>
+    <li>ポスト・博士後キャリアの拡充（任期なし・政策系・民間等）</li>
+    <li>企業による博士人材の評価基準の改革</li>
+    <li>「遠回りなキャリア」に対する社会的正当性の回復</li>
+  </ul>
+
+  <p>そうしてはじめて、「優秀な日本人学生が博士課程に戻ってくる」構造がつくれます。外国人を排除することでは、何も始まりません。</p>
+
+  <h2>納税者の皆さんへ</h2>
+  <p>この政策は「日本のため」になっていますか？</p>
+
+  <p>「なぜ外国人に税金を使うのか？」という疑問はわかります。でも、次の問いも考えてみてください：</p>
+
+  <blockquote><strong>「その支援は、本当に将来の日本にとって価値のある投資なのか？」</strong></blockquote>
+
+  <p>能力ではなく、国籍だけで選ぶような制度で守られるのは、競争に負けた者たちです。それは「支援」ではなく、「ゾンビ化した制度の延命」です。</p>
+
+  <p>あなたは「助けている」つもりかもしれない。でも実際には、競争から降りた人と、機能不全の制度を生き長らえさせているだけかもしれません。</p>
+
+  <p><strong>公的資金は、可能性に投資されるべきであって、既得権を守るために使われるべきではありません。</strong></p>
+
+  <p>それがなければ、それは戦略ではなく、衰退です。</p>
+</body>
+</html>
