@@ -1,1 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FP.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+ <div class="back-home">
+	<a href="index.html">← Back to Home</a>
+</div>
+<h1 id="FP">Losing the Competition? Change the Rules! </h1>
+<h2> Japan’s Strange Turn in Graduate Funding Policy</h2>
+<div class="language-switch">
+  <a href="FP_ja.html">Japanese version</a>
+</div>
+<p>HIROTAKA, Fukui</p>
+<p></p>
+<section>
+    <p>
+      Let’s say you’re applying for a highly competitive doctoral fellowship. You prepare meticulously, craft a compelling proposal, and ace the interview. But in the end, someone else—better prepared, more focused, more ambitious—gets the offer. What do you do?
+    </p>
+    <p>
+      In a meritocratic world, the answer is simple: improve and try again. But what if you could change the rules?
+    </p>
+    <p>
+      Well, in Japan’s latest policy turn, that seems to be exactly what’s happening.
+    </p>
+  </section>
+
+  <section>
+    <h2>Redefining Competition by Exclusion</h2>
+    <p>
+      In a surprising and subtly nationalistic move, Japan’s Ministry of Education, Culture, Sports, Science and Technology (MEXT) has announced that starting in fiscal year 2026, living stipends for doctoral students under its major support schemes will be restricted to Japanese nationals only. The rationale? Foreign students—especially those from China—are reportedly occupying a disproportionately large share of available slots, up to 40%.
+    </p>
+    <p>
+      It sounds patriotic. But scratch the surface, and the picture becomes clear: this is not affirmative action for disadvantaged groups. It’s a political workaround for the inconvenient truth that, in a fair competition—even one conducted in Japanese at Japanese universities—foreign students often outperform their Japanese peers.
+    </p>
+    <p>
+      So, if some Japanese students are losing in an open and fair process, the proposed solution is not to strengthen their preparation or improve the system. It's to redefine the competition entirely.
+    </p>
+    <p>
+      This is not only morally questionable—it’s economically unsound.
+    </p>
+  </section>
+
+  <section>
+    <h2>Meritocracy Replaced by Nationality</h2>
+    <p>
+      If the goal is to train world-class researchers, we should fund the best candidates, not the most domestic. Public money should be invested in intellectual potential and productivity, not in passport-based quotas. Choosing candidates based on nationality instead of ability reduces the return on investment. Worse, it discourages excellence. If being Japanese is enough to secure funding, what incentive remains to strive for excellence?
+    </p>
+    <p>
+      Ironically, many of these foreign students will go on to contribute to Japan’s research, economy, and innovation—if they’re allowed to stay. But now the message is: "You're too good. Please stop winning."
+    </p>
+    <p>
+      Far from protecting Japan, this policy weakens it. It replaces competition with fear, merit with protectionism, and meaningful outcomes with political optics.
+    </p>
+  </section>
+
+  <section>
+    <h2>Zero-Sum Thinking in Academia</h2>
+    <p>
+      To those unfamiliar with Japan’s academic climate, this may not sound alarming. In most countries, attracting a large number of talented international PhD students is considered a success. But in Japan, this is being framed as a zero-sum problem: more Chinese students mean fewer opportunities for Japanese students.
+    </p>
+    <p>
+      The stated justification is that economic and career insecurity discourages Japanese students from pursuing doctoral studies. Fair enough. However, rather than addressing the root causes—low stipends, scarce permanent positions, and weak academic-industry bridges—MEXT has opted to limit competition instead.
+    </p>
+    <p>
+      In other words, if your students can't win the race, remove the other runners.
+    </p>
+  </section>
+
+  <section>
+    <h2>The Wrong Kind of Affirmative Action</h2>
+    <p>
+      Real affirmative action seeks to correct historical and structural disadvantages. It is a tool for equity, not preference. But MEXT’s proposal does not help the disadvantaged. Japanese students are not institutionally excluded from applying to universities in Japan. They have multiple advantages: the language, local networks, and institutional familiarity.
+    </p>
+    <p>
+      Yet they are still losing.
+    </p>
+    <p>
+      This should be a wake-up call, not an excuse to close ranks. However, rather than improving graduate preparation, fixing career pathways, or making academia viable again, policymakers have chosen the easier route: excluding the competition.
+    </p>
+    <p>
+      That is not equity. That is protectionism.
+    </p>
+  </section>
+
+  <section>
+    <h2>The Real Problem: Broken Incentives</h2>
+    <p>
+      What’s driving the crisis is not foreign students. It’s the rational decision-making of domestic talent. In Japan today, pursuing a PhD is a financially irrational choice.
+    </p>
+    <p>
+      A doctoral student receives about 2.4 million yen (roughly $15,000) per year. Their peers in corporate careers may earn two or three times that amount. Add years of opportunity cost, and the gap becomes substantial.
+    </p>
+    <p>
+      And what’s the payoff? Temporary contracts, limited career prospects, social stigma, and a lower income even into one’s 30s.
+    </p>
+    <p>
+      Japan's brightest students are not being pushed out. They're opting out.
+    </p>
+    <p>
+      And instead of fixing that, the policy response is to blame the foreigners.
+    </p>
+  </section>
+
+  <section>
+    <h2>Nationalism Disguised as Reform</h2>
+    <p>
+      Let’s not pretend the "40% Chinese" figure is neutral. It is being wielded as a political tool to stir fear and reclaim academic spaces for nationals. But numbers don’t lie: international students are winning under the existing system. They are better prepared, more motivated, and more willing to endure the challenges of academic life in Japan.
+    </p>
+    <p>
+      Excluding them doesn’t make Japanese students more competitive. It lowers the standard. It’s like banning international athletes from the Olympics to boost local medal counts.
+    </p>
+    <p>
+      And it sends a troubling signal abroad: Japan prioritizes control over quality and protectionism over merit.
+    </p>
+  </section>
+
+  <section>
+    <h2>Eroding the Foundations of Academia</h2>
+    <p>
+      Academia depends, however imperfectly, on meritocracy. Peer review, open competition, and performance-based evaluation are its backbone. When states intervene to reward identity over achievement, they corrode that foundation.
+    </p>
+    <p>
+      Japan already suffers from brain drain, underemployment of PhDs, and declining global research visibility. Telling ambitious, qualified students who speak the language, pass the exams, and earn admission that they are no longer welcome is not only short-sighted—it’s self-defeating.
+    </p>
+  </section>
+
+  <section>
+    <h2>The Exodus of Domestic Talent</h2>
+    <p>
+      The deeper issue is that top Japanese students are avoiding doctoral paths entirely. Not because they're blocked, but because the system no longer makes sense. They do the math. They see the opportunity cost. They read the job market. And they walk away.
+    </p>
+    <p>
+      Many top graduate programs in Japan no longer attract the nation’s top students. That decline began long before the foreign "influx."
+    </p>
+    <p>
+      But that’s a harder problem to solve—and a harder one to campaign on.
+    </p>
+  </section>
+
+  <section>
+    <h2>What Japan Needs Instead</h2>
+    <ul>
+      <li>Competitive stipends</li>
+      <li>Expanded research careers</li>
+      <li>Pathways from PhD to private sector and policy roles</li>
+      <li>Corporate hiring reform</li>
+      <li>Social legitimacy for non-traditional career trajectories</li>
+    </ul>
+    <p>
+      Only then will the best and brightest consider the PhD a worthwhile investment.
+    </p>
+    <p>
+      Until then, insulating the system will only reward mediocrity.
+    </p>
+  </section>
+
+  <section>
+    <h2>A Word to Taxpayers</h2>
+    <p>
+      Many Japanese taxpayers are asking: "Why are we supporting foreign students with public funds?"
+    </p>
+    <p>
+      It’s a fair question. But here’s a tougher one:
+    </p>
+    <p>
+      Are we investing in excellence, or passport-based entitlement?
+    </p>
+    <p>
+      Taxpayers deserve their money to be used wisely. But using it to protect students who lose in open competition isn’t wise. It’s wasteful.
+    </p>
+    <p>
+      You think you’re helping. However, you may be inadvertently funding zombies—students, institutions, and systems that survive only because competition has been eliminated.
+    </p>
+    <p>
+      Public money should reward potential, not protect mediocrity.
+    </p>
+    <p>
+      Anything less isn’t a national strategy. It’s a national decline.
+    </p>
+  </section>
+</body>
+</html>
