@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>INH.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+ <div class="back-home">
+	<a href="index.html">← Back to Home</a>
+</div>
+<h1 id="FP">The Map We Inherit: A Family Story of Class, Love, and Learning </h1>
+<div class="language-switch">
+  <a href="INH_ja.html">Japanese version</a>
+</div>
+<p>HIROTAKA, Fukui</p>
+<section>
+  <h2>Introduction</h2>
+  <p><strong>“You won’t need science once you’re out in the real world,”</strong> my grandfather once said as he leaned back in his chair, grease still darkening the skin beneath his fingernails. He had spent his life driving trucks, moving goods along highways he could navigate without maps. To him, knowledge was what kept an engine running, not what filled a book.</p>
+
+  <p>A few years later, I remember stepping into the office of my other grandfather. He wore a crisp suit and kept leather-bound books stacked behind him like a second wall. He had a university degree and had risen to become a company president. His hands were clean, his words polished, and his presence always slightly distant—like someone who had spent a lifetime mastering the art of being listened to.</p>
+
+  <p>These two men never met. But they live together in me. One gave me the sense that life is earned by labor. The other, that life is claimed by knowing which door to knock on.</p>
+
+  <p>My mother was the daughter of the truck driver. She graduated from high school and went straight to work. She never went to college, not because she wasn’t smart, but because there was never enough money, never enough expectation. My father, on the other hand, is the son of the company president. He holds a PhD, studied abroad, and spent years as a researcher in the United States. Their marriage was not just a union of two people—it was the quiet collision of two worlds.</p>
+
+  <p>I grew up in the in-between. I went to university. So did my brothers. Two of us are pursuing doctorates, carrying forward the academic path of our father, while born from the hands of a woman who never had the chance to walk it herself.</p>
+
+  <p>This is an essay about that inheritance—not of money, or land, or even ambition, but of <strong>maps</strong>. The ones we are given. The ones we never see. And the ones we draw for those who come after us.</p>
+</section>
+
+<section>
+  <h2>Chapter 1: Two Grandfathers</h2>
+  <p>My maternal grandfather never spoke about books. He spoke about oil changes, faulty spark plugs, road fatigue. He had a thick, sun-darkened neck and hands that looked like they belonged to the road itself—cracked, calloused, always stained with something. When I was a child, I thought he was a kind of magician, someone who could fix anything with his hands. I didn’t know then that what he fixed, day after day, was survival.</p>
+
+  <p>He left school at fifteen. There was no choice. His father drank too much, and the money never stretched. He became a truck driver, moving heavy things for men who owned lighter lives. He drove long hours, ate convenience store meals in silence, and came home with his back aching and his eyes dulled. I never heard him complain. But I also never heard him dream.</p>
+
+  <p>My paternal grandfather, by contrast, lived in a house with heavy curtains and polished floors. He had gone to university at a time when that still meant something sacred. He read newspapers in silence every morning, sipping coffee that smelled like importance. His office smelled of leather and dust and distant places. He became a company president. When he spoke, people listened—even if he said nothing new.</p>
+
+  <p>I remember once sitting at his feet, looking up at the rows of books behind him. I couldn’t understand the titles, but they looked powerful. I asked him once if he had read them all. He said, “Not all of them. But they belong here.”</p>
+
+  <p>The two men shared almost nothing. One drove trucks. The other sat in boardrooms. One learned to be quiet because there was no space to speak. The other was taught to speak because people were always ready to listen.</p>
+
+  <p>Yet both were called “Grandpa.” Both gave me sweets in secret. Both smelled of something warm and familiar. One like engine oil. The other like old tobacco and cedar.</p>
+
+  <p>Looking back, I realize their lives were shaped by more than personality or effort. They were shaped by class, opportunity, and education—words I didn’t yet have when I watched them live out two radically different versions of manhood.</p>
+
+  <p>One taught me the dignity of labor. The other, the luxury of command. Between them, I learned that life does not begin at birth, but at the starting line we are placed upon.</p>
+</section>
+
+<section>
+  <h2>Chapter 2: Daughters and the Direction of Wind</h2>
+  <p>My mother never spoke of college—not because she didn’t want to go, but because she was never taught to expect it. In her family, graduating from high school was enough. More than enough. It meant you were ready to work, to earn, to help.</p>
+
+  <p>Her older sister followed the same path. Marriage to a man who worked in a small auto repair shop. Life shaped by necessity, not desire.</p>
+
+  <p>My father’s sister, on the other hand, graduated from Waseda University and married a man from a journalistic elite. Their marriage felt effortless. They shared a world.</p>
+
+  <p>My mother’s sister lived nearby, but in another universe. Her world was narrower, but not loveless. Just heavier.</p>
+
+  <p>We don’t fall in love randomly. We fall in love with people we meet—and we meet people in places our lives allow us to access.</p>
+
+  <p>My father’s sister married into her class. My mother’s sister married into hers. No one lived wrongly. But marriage, too, is a form of reproduction—not biological, but cultural. Quiet.</p>
+</section>
+
+<section>
+  <h2>Chapter 3: My Mother, the Bridge</h2>
+  <p>My mother never went to university. She worked in offices, always early, always precise, always unseen.</p>
+
+  <p>She met my father—PhD holder, American-trained researcher—at work. Their marriage drew a quiet line between two worlds: one of books, the other of budgets.</p>
+
+  <p>She never told us to study. She just built a world where studying was possible.</p>
+
+  <p>We moved into a world she never entered, yet made possible.</p>
+
+  <p>She didn’t break the chain. She became its seam—the silent joint where two lines of life met.</p>
+
+  <p>She was never given the map. But she built the road.</p>
+</section>
+
+<section>
+  <h2>Chapter 4: Education, or Inheritance?</h2>
+  <p>We studied. We succeeded. But did we build the road, or simply walk it?</p>
+
+  <p>My father gave the map. My mother made it walkable.</p>
+
+  <p>I planted seeds in soft soil, tilled by generations before me.</p>
+
+  <p>Education is not a ladder. For many, it is a hallway with locked doors—and only some are given keys.</p>
+
+  <p>I am educated. But I carry the quiet question: is this mine? Or inherited?</p>
+</section>
+
+<section>
+  <h2>Chapter 5: The Things We Carry</h2>
+  <p>I carry degrees. I carry my mother’s silence. My grandfather’s grease-stained hands. My father’s bookshelves.</p>
+
+  <p>I carry a sense of being between: between two classes, two vocabularies, two worlds.</p>
+
+  <p>I carry questions. About success. About fairness. About what it means to owe.</p>
+
+  <p>We do not carry only what we choose. We carry what we’re given—by family, by class, by silence, by love.</p>
+
+  <p>And maybe the most honest thing is not to pretend we earned it all, but to carry it well.</p>
+</section>
+</body>
+</html>
