@@ -73,6 +73,9 @@ Tokyo University of Foreign Studies, Japan
 - Completed, IMF 19th Macroeconomist Training Program, IMF Regional Office for Asia and the Pacific in cooperation with JICA, 2024  
 - Completed, KOBE HPC Summer School, cosponsored by Kobe University, University of Hyogo, and RIKEN Center for Computational
 Science (R-CCS), 2024
+- Princeton Initiative: Macro, Money and Finance Conference, Princeton University, Bendheim Center for Finance, (Sep 5–7, 2025) — Selected participant  
+- Awardee, 2025 Macrofinance Online Summer School — Selected based on performance
+
 
 ---
 
