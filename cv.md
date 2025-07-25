@@ -58,7 +58,7 @@ Tokyo University of Foreign Studies, Japan
 ---
 
 ## 🎤 Presentations & Seminars (* Scheduled)
-2025:  Economics Workshop for Young Economists, Monetary Economics Seminar of Kobe University, Spring Conference of the Japan Society of International Economics, Princeton Initiative: Macro, Money and Finance Conference (Selected participant)
+2025:  Economics Workshop for Young Economists, Monetary Economics Seminar of Kobe University, Spring Conference of the Japan Society of International Economics, Princeton Initiative: Macro, Money and Finance Conference* (Selected participant)
 
 ---
 
