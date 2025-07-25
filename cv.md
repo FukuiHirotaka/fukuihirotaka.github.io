@@ -35,7 +35,7 @@ Tokyo University of Foreign Studies, Japan
 
   *(Under preparation)*-->
   
-- **On the Sources of Macroeconomic Fluctuations in Sub-Saharan African Countries: The Role of Trend Shocks**
+- **On the Sources of Macroeconomic Fluctuations in Sub-Saharan African Countries**
   
   *(Under preparation)*
   
@@ -43,13 +43,6 @@ Tokyo University of Foreign Studies, Japan
 
   *(Under preparation)*-->
 
-- **Acyclical Behavior of Trade Balance in Sub-Saharan African Economies: An Empirical Examination**
-
-  *(Under preparation)*
-
-- **Macroeconomic Effect of Dependence on Imported Foods in Sub-Saharan African Countries**
-
-  *(Under preparation)*
 ---
 
 ## 🧑‍🏫 Teaching Experience
@@ -65,7 +58,7 @@ Tokyo University of Foreign Studies, Japan
 ---
 
 ## 🎤 Presentations & Seminars (* Scheduled)
-2025:  Economics Workshop for Young Economists, Monetary Economics Seminar of Kobe University, Spring Conference of the Japan Society of International Economics
+2025:  Economics Workshop for Young Economists, Monetary Economics Seminar of Kobe University, Spring Conference of the Japan Society of International Economics, Princeton Initiative: Macro, Money and Finance Conference (Selected participant)
 
 ---
 
