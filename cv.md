@@ -100,4 +100,4 @@ Economics, Kobe U, Apr. 2024-Mar. 2025
 
 ---
 
-_Last updated: June 2025_
+_Last updated: July 2025_
