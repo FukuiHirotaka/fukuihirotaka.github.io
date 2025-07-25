@@ -8,7 +8,8 @@ Website: [https://fukuihirotaka.github.io/](https://fukuihirotaka.github.io/)
 ## 🎓 Current Position
 **Ph.D. Student**, Graduate School of Economics, Kobe University, Apr. 2024 - present  
 - Advisors: Shigeto Kitano, Yoichi Matsubayashi, 
-- Fields: International Macroeconomics, Quantitative Macroeconomics, African Economies
+- Fields: International Macroeconomics, Quantitative Macroeconomics, Emerging and Developing Economies (Especially African Countries)
+
 ---
 
 ## 📘 Education
@@ -64,7 +65,7 @@ Tokyo University of Foreign Studies, Japan
 ---
 
 ## 🎤 Presentations & Seminars (* Scheduled)
-2025:  Economics Workshop for Young Economists, Monetary Economics Seminar of Kobe University, Spring Conference of the Japan Society of International Economics*
+2025:  Economics Workshop for Young Economists, Monetary Economics Seminar of Kobe University, Spring Conference of the Japan Society of International Economics
 
 ---
 
