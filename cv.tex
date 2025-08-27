@@ -1,0 +1,187 @@
+\documentclass[11pt]{article}
+
+% --- PACKAGES ---
+\usepackage[margin=1in]{geometry}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{datetime}
+\usepackage[inline]{enumitem}
+\usepackage{color}
+\usepackage{xcolor}
+
+% --- PERSONAL INFO ---
+\newcommand{\myname}{Hirotaka Fukui}
+\newcommand{\websiteurl}{{https://fukuihirotaka.github.io/}}
+\newcommand{\websitename}{https://fukuihirotaka.github.io/}
+\newcommand{\phone}{}
+\newcommand{\email}{227e127e@gsuite.kobe-u.ac.jp}
+\newcommand{\address}{
+  Rokko-dai Third Building, Room 326 \\ 
+  Graduate School of Economics, Kobe University \\
+  2-1 Rokkodai-cho Nada-ku \\
+  Kobe, Hyogo, Japan 6578501
+}
+
+% --- STYLING ---
+\definecolor{darkred}{rgb}{0.7, 0, 0}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkred,
+    filecolor=darkred,
+    urlcolor=darkred,
+    citecolor=darkred
+}
+
+\newcommand{\RR}{\raggedright\arraybackslash}
+\newcommand{\RL}{\raggedleft\arraybackslash}
+\newcolumntype{\twocols}{>{\RR}p{1.25in}>{\RR}X}
+\newcolumntype{\threecols}{>{\RR}p{1.25in}>{\RR}X>{\RL}p{1in}}
+
+% --- SECTION FORMATTING ---
+\titleformat{\section}
+{\Large\bfseries}
+{}{0em}{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries}
+{}{0em}{}
+
+\titleformat{\subsubsection}
+{\normalsize}
+{}{0em}{}
+
+% --- HEADERS AND FOOTERS ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\textit{\today}}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+% --- NAME AND CONTACT INFO ---
+\begin{center}
+\textbf{\LARGE Hirotaka Fukui}
+
+\vspace{0.3em}
+{\color{darkred} \href{mailto:\email}{\email}, \href{\websiteurl}{\websitename}}
+\end{center}
+
+% --- CURRENT POSITION ---
+\section*{CURRENT POSITION}
+\begin{tabularx}{\linewidth}{X}
+Ph.D. student, Department of Economics, Kobe University \hfill Apr. 2024 - \\
+- Fields: International Macroeconomics, Monetary Economics, Business Cycles in Emerging and Developing Economies\\
+- Advisor: Shigeto Kitano, Yoichi Matsubayashi,
+\end{tabularx}
+
+% --- EDUCATION ---
+\section*{EDUCATION}
+\begin{tabularx}{\linewidth}{X}
+%Ph.D. in Economics, Kobe University, Japan \hfill 2027 (expected)\\
+M.A. in Economics, Kobe University, Japan \hfill 2024\\
+B.A. in Language and Area Studies, Tokyo University of Foreign Studies, Japan \hfill 2022
+\end{tabularx}
+
+% --- WORKING PAPERS ---
+\section*{WORKING PAPERS}
+\begin{enumerate}
+\item On the Sources of Macroeconomic Fluctuations in Sub-Saharan African Countries
+\item International Financial Integration, Financial Development,
+and Macroeconomic Volatility in Sub-Saharan Africa
+\item Inequality Matters for Aggregate Fluctuations in Sub-Saharan African Economies: Informality and Financial Development
+\item High Volatility in Consumption for Africa: Role of Food Import Dependence
+\item Financial Friction and Fiscal Space
+\item Boom, Bust, and Breakdown: Did Ghana’s 2006 Liberalization Sow the Seeds of the 2022 Default?
+\end{enumerate}
+
+% --- PUBLICATIONS ---
+\section*{PUBLICATIONS}
+%\begin{enumerate}
+%\item Your paper title
+%\end{enumerate}
+
+% --- TEACHING EXPERIENCE ---
+\section*{TEACHING EXPERIENCE}
+\subsection*{Teaching Assistant (Kobe University)}
+\begin{tabularx}{\linewidth}{X}
+1E332 Econometrics (Prof.  Yoichi Matsubayashi ) Undergrad. \\
+\hfill Spring 2024, 2025\\
+2E310 Intermediate Macroeconomics (Prof. Tetsugen Haruyama and Prof. Agata Wierzbowska) Undergrad. \\ \hfill Spring, 2025\\
+3E329 Economic statistics (Prof.  Yoichi Matsubayashi ) Undergrad. \hfill Fall 2024, 2025\\
+3E368 Programming \& Economic Analysis (Prof. Tetsugen Haruyama) Undergrad. \\
+\hfill Fall 2024 \\
+3E600 Advanced Macroeconomics I (Prof. Tetsugen Haruyama) Ph.D. \hfill 3Q 2024\\
+3E601 Advanced Macroeconomics I (Prof. Kazuharu Yanagimoto) Ph.D. \hfill 4Q 2025\\
+3E609 Advanced Macroeconomics IV (Prof. Kazuharu Yanagimoto) Ph.D. \hfill Fall 2025\\
+\end{tabularx}
+
+% --- FELLOWSHIPS AND AWARDS ---
+\section*{FELLOWSHIPS, HONORS, AND AWARDS}
+\begin{tabularx}{\linewidth}{X}
+Next-Generation Outstanding Doctoral Human Development Project through Co-creation in Different Fields in the Support for Pioneering Research Initiated by the Next Generation (SPRING) of the Japan Science and Technology Agency (JST) \hfill 2024-Present
+\end{tabularx}
+
+% --- RESEARCH GRANTS ---
+% \section*{RESEARCH GRANTS}
+% \begin{tabularx}{\linewidth}{X}
+% [Grant name] \hfill [Year-Year]
+% \end{tabularx}
+
+% --- SEMINARS ---
+\section*{SEMINARS, PRESENTATIONS (* SCHEDULED)}
+\begin{tabularx}{\linewidth}{X}
+2025: Economics Workshop for Young Economists, Monetary Economics Seminar of Kobe University, The 14th Spring Meeting of The Japan Society of International Economics, Princeton Initiative: Macro, Money and Finance Conference (\textbf{Selected participant})*  \\
+\\
+\if0
+2026: CSAE Conference*, Summer School in International Economics*, GEP/CEPR Postgraduate Conference*, CEPR European Summer Symposium in International Macroeconomics (ESSIM)*, Salento Macro Meetings*, Dauphine Finance PhD Workshop*, PSE Macro Days*, CEPR Macroeconomics and Growth Annual Symposium*, CEPR IMF Programme Meeting*, CEPR Annual Monetary Economics and Fluctuations Symposium*, WE\_ARE\_IN Macroeconomics and Finance Conference*, 
+\fi
+% 2024: [List of institutions]
+\end{tabularx}
+
+% --- PROFESSIONAL MEMBERSHIPS ---
+\section*{PROFESSIONAL MEMBERSHIPS}
+\begin{tabularx}{\linewidth}{X}
+Japanese Economic Association\\
+Japan Society of International Economics \\
+Japan Society of Monetary Economics
+\end{tabularx}
+
+% --- SKILLS ---
+\section*{SKILLS}
+\subsection*{Programming}
+\begin{tabularx}{\linewidth}{X}
+Proficient in: Matlab, Python, R, and Julia\\
+Familiar with: C, and Fortran
+\end{tabularx}
+
+\subsection*{Languages}
+\begin{tabularx}{\linewidth}{X}
+Japanese, English, French.
+\end{tabularx}
+
+% --- OTHER ACTIVITIES ---
+\section*{OTHER ACTIVITIES}
+\begin{tabularx}{\linewidth}{X}
+\textbf{19th Macroeconomist Training Program}\\
+Sponsored: IMF Regional Office for Asia and the Pacific in cooperation with JICA \hfill January 10-12, 2024\\
+%Activities: Through lectures by former IMF economists and group work on simulated IMF economic reviews, I learned how the IMF uses financial programming and other economic analysis tools to analyze macroeconomic issues and make policy recommendations, country economic reviews, and loan programs.\\
+\\
+\textbf{KOBE HPC Summer School}\\
+Cosponsored: Kobe University, University of Hyogo, and RIKEN Center for Computational Science, R-CCS \hfill September 18-22, 2023\\
+%Activities: I acquired knowledge of basic parallel computing methods in OpenMP, MPI, and OpenACC for various parallel computations, such as thread parallel, process parallel, and accelerator offloading, which is necessary for developing parallel applications to utilize simulations on massively parallel supercomputers like 'Fugaku.'
+\\
+\textbf{2025 Macrofinance Online Summer School}\\
+Sponsored: Princeton University, Bendheim Center for Finance \hfill June 3 to July 7, 2025\\
+\textbf{Awardee selected based on performance (and selected to attend the Princeton Initiative)}
+\end{tabularx}
+\section*{SERVICE}
+\begin{tabularx}{\linewidth}{X}
+\textbf{Chair of the Executive Committee, The Student Council of the Graduate School of Economics, Kobe U} \\
+\hfill Apr. 2024-Mar. 2025
+\end{tabularx}
+\end{document}
