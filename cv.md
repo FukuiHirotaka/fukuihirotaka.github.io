@@ -8,7 +8,7 @@ Website: [https://fukuihirotaka.github.io/](https://fukuihirotaka.github.io/)
 ## 🎓 Current Position
 **Ph.D. Student**, Graduate School of Economics, Kobe University, Apr. 2024 - present  
 - Advisors: Shigeto Kitano, Yoichi Matsubayashi, 
-- Fields: International Macroeconomics, Quantitative Macroeconomics, Emerging and Developing Economies (Especially African Countries)
+- Fields: International Macroeconomics, Monetary Economics, Emerging and Developing Economies (Especially African Countries)
 
 ---
 
@@ -63,13 +63,16 @@ Tokyo University of Foreign Studies, Japan
 ---
 
 ## 🎖 Fellowships and Awards
-- JST SPRING Fellowship, JST, 2024–present 
+- JST SPRING Fellowship, JST, 2024–present
+- 
+---
+
+## 🔨　Other Activities
 - Completed, IMF 19th Macroeconomist Training Program, IMF Regional Office for Asia and the Pacific in cooperation with JICA, 2024  
 - Completed, KOBE HPC Summer School, cosponsored by Kobe University, University of Hyogo, and RIKEN Center for Computational
 Science (R-CCS), 2024
-- Princeton Initiative: Macro, Money and Finance Conference, Princeton University, Bendheim Center for Finance, (Sep 5–7, 2025) — Selected participant  
-- 2025 Macrofinance Online Summer School
-
+- Princeton Initiative: Macro, Money and Finance Conference, Princeton University, Bendheim Center for Finance, 2025 — Selected participant  
+- Completed, 2025 Macrofinance Online Summer School, Princeton University, Bendheim Center for Finance, 2025
 
 ---
 
@@ -93,4 +96,5 @@ Economics, Kobe U, Apr. 2024-Mar. 2025
 
 ---
 
-_Last updated: July 2025_
+_Last updated: August 2025_
+
